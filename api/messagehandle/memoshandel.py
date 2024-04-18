@@ -48,8 +48,9 @@ def push_to_app2(data):
         else:
             pass
     except Exception as e:
+        pass
+    finally:
         bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')
-        bot.send_text(e)
-
+        bot.send_text("push_to_app3 发送出错了")
 def push_to_app3(data):
     print("Pushing to Application 3:", data)

@@ -20,3 +20,6 @@ flaskwebhook，把消息推送给企业微信机器人
 没有的话就按照类型发送，发送
 type: image  text  file   markdown
 content: 内容
+
+
+有问题，如果文件的大小超过20G的话，会转为文本发送

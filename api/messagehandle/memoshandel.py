@@ -39,8 +39,12 @@ def push_to_app2(data):
             # 这里可以添加处理文本的代码
             bot.send_text(data['content'])
         elif data.get('type') == 'file':
-            # 这里可以添加处理文本的代码
-            bot.upload_media_fromurl(data['content'])
+            file_path = data['content']
+            media_type = 'file'  # Can be 'image', 'voice', 'video', or 'file'
+            response = bot.upload_media_fromurl(file_path, media_type)
+            # print(response)
+            response = bot.send_media(media_type, response)
+            # print(response)
         else:
             pass
     except Exception as e:

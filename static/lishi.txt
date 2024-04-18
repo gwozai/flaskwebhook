@@ -1,0 +1,7 @@
+https://chat.openai.com/c/dd99c4a9-930f-4f56-a973-096887c492d5 | Login Page Vue Component
+https://github.com/search?q=element-plus+stars%3A10..100+pushed%3A%3E2024-01-01+&type=repositories&p=7 | Repository search results
+https://github.com/gwozai/PureChat/fork | Fork gwozai/PureChat
+https://pureadmin.cn/#/about | 关于 | PureChat
+https://github.com/Hyk260/PureChat/blob/master/src/views/chatStudio/chat/Editor.vue | PureChat/src/views/chatStudio/chat/Editor.vue at master · Hyk260/PureChat
+https://qm.qq.com/cgi-bin/qm/qr?k=T3v7OJMk74By6uJtDvgCcRsMaeYc8WQu&authKey=7UHRYsJo%2FhrkJE%2BOQBYqvBet7Wrq%2BPVkU1FpDG6LYrmGQ4AxWCCnFztrKat1WBdd&noverify=0&group_code=194541068 | 正在跳转
+https://github.com/ntnyq/element-plus-admin | ntnyq/element-plus-admin： ：house： 基于 Vue 3 和 ElementPlus 的管理样板

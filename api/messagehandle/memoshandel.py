@@ -4,9 +4,10 @@ from api.messagechannel.qywx.utils import fetch_and_encode_image
 
 def push_to_app1(data):
     try:
-        activity_type = data['activityType']
+        activity_type = data.get('activityType')
         # print("activityType:", activity_type)
-
+        if not activity_type:
+            return
         # Only process if the activity type is not memo deletion
         if activity_type != "memos.memo.deleted":
             bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')

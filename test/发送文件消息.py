@@ -5,7 +5,7 @@ def send_data_to_webhook():
     headers = {'Content-Type': 'application/json'}
     data = {
         "type": "file",
-        "content": "http://1.15.7.2:9000/album/1.mp4"
+        "content": "https://file.ertuba.com/2023/0128/eff35cb25cfbd1b05ebaff35465d153c.jpg"
     }
 
     # 发送POST请求

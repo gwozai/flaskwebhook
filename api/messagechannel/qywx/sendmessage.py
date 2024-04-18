@@ -56,9 +56,9 @@ bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')
 # print(response)
 
 
-file_path = '../../../static/1.mp3'
-media_type = 'file'  # Can be 'image', 'voice', 'video', or 'file'
-response = bot.upload_media(file_path, media_type)
-print(response)
-response = bot.send_media(media_type, response)
-print(response)
+# file_path = '../../../static/1.mp3'
+# media_type = 'file'  # Can be 'image', 'voice', 'video', or 'file'
+# response = bot.upload_media(file_path, media_type)
+# print(response)
+# response = bot.send_media(media_type, response)
+# print(response)

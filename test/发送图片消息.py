@@ -4,8 +4,8 @@ def send_data_to_webhook():
     url = 'https://memoswebhook.gwozai.com/webhook'  # 替换成你的Webhook URL
     headers = {'Content-Type': 'application/json'}
     data = {
-        "type": "text",
-        "content": "这是一条测试消息"
+        "type": "image",
+        "content": "https://file.ertuba.com/2023/0128/eff35cb25cfbd1b05ebaff35465d153c.jpg"
     }
 
     # 发送POST请求

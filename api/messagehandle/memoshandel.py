@@ -23,7 +23,7 @@ def push_to_app1(data):
             print("Memo deletion event, no action taken")
     except Exception as e:
         bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')
-        bot.send_text("push_to_app2 发送出错了")
+        bot.send_text("push_to_app2 发送出错了"+e)
     finally:
         pass
 def push_to_app2(data):
@@ -42,12 +42,12 @@ def push_to_app2(data):
             file_path = data['content']
             media_type = 'file'  # Can be 'image', 'voice', 'video', or 'file'
             response = bot.upload_media_fromurl(file_path, media_type)
-            response = bot.send_media(media_type, response)
+            bot.send_media(media_type, response)
         else:
             pass
     except Exception as e:
         bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')
-        bot.send_text("push_to_app2 发送出错了")
+        bot.send_text("push_to_app2 发送出错了"+e)
     finally:
         pass
 

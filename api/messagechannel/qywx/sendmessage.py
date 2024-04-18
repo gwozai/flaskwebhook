@@ -11,14 +11,25 @@ class WeChatBot:
         response = requests.post(self.base_url, headers={'Content-Type': 'application/json'}, data=json.dumps(data))
         return response.json()
 
-    def upload_media(self, file_path, media_type):
+    def upload_media(self, file_url, media_type):
         url = f"{self.upload_url}&type={media_type}"
-        file_name = os.path.basename(file_path)
-        file_size = os.path.getsize(file_path)
-        with open(file_path, 'rb') as file:
-            files = {'media': (file_name, file, 'application/octet-stream', {'filename': file_name, 'filelength': file_size, 'Content-Type': 'application/octet-stream'})}
+        response = requests.get(file_url)  # 获取网络文件的响应
+        if response.status_code == 200:
+            file_content = response.content  # 文件内容
+            file_name = os.path.basename(file_url)  # 从URL提取文件名
+            file_size = len(file_content)  # 文件大小，通过内容长度获取
+            files = {
+                'media': (
+                    file_name,
+                    file_content,
+                    'application/octet-stream',
+                    {'filename': file_name, 'filelength': file_size, 'Content-Type': 'application/octet-stream'}
+                )
+            }
             response = requests.post(url, files=files)
             return response.json()
+        else:
+            return {'error': 'Failed to download file', 'status_code': response.status_code}
 
     def send_media(self, media_type, response):
         if response.get("media_id"):
@@ -56,7 +67,7 @@ bot = WeChatBot('4e35a96d-134b-45fa-9c5a-f3d4f65670f6')
 # print(response)
 
 
-# file_path = '../../../static/1.mp3'
+# file_path = 'http://1.15.7.2:9000/album/1.mp4'
 # media_type = 'file'  # Can be 'image', 'voice', 'video', or 'file'
 # response = bot.upload_media(file_path, media_type)
 # print(response)

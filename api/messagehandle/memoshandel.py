@@ -38,7 +38,9 @@ def push_to_app2(data):
         elif data.get('type') == 'text':
             # 这里可以添加处理文本的代码
             bot.send_text(data['content'])
-
+        elif data.get('type') == 'file':
+            # 这里可以添加处理文本的代码
+            bot.upload_media_fromurl(data['content'])
         else:
             pass
     except Exception as e:
